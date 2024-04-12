@@ -11,10 +11,16 @@ class Guess_The_Num:
         computer_choice = random.randrange(0,101)
 
         guess_count = 0
+        input_validation_flag = False
 
         while(guess_count < 3):
 
-            player_choice = int(input("Please choose a number between 0 and 100 "))
+            while(not input_validation_flag):
+                player_choice = int(input("Please choose a number between 0 and 100 "))
+                if (player_choice >=0 and player_choice <= 100):
+                    input_validation_flag = True
+                else:
+                    print("That is not a valid number")
 
             if(player_choice == computer_choice):
                 print("You guessed the correct number, you win!")
@@ -31,10 +37,18 @@ class Guess_The_Num:
         
     #This function will have the computer try and guess your number
     def Guess_The_Number_Computer():
-        player_choice = int(input("Please choose a number between 0 and 100 "))
-
+       
         guess_count = 0
+        input_validation_flag = False
+       
+        while(not input_validation_flag):
+                player_choice = int(input("Please choose a number between 0 and 100 "))
+                if (player_choice >=0 and player_choice <= 100):
+                    input_validation_flag = True
+                else:
+                    print("That is not a valid number")
 
+    
         while (guess_count < 3):
             computer_choice = random.randrange(0,101)
 
