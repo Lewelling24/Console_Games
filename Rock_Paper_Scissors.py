@@ -3,6 +3,10 @@ import random
 class rock_paper_scissors:
     #prints win/lose/tie to the console, returns character for outcome
     #returns P for player win, C for computer win, T for tie
+
+    def __init__(self):
+        pass
+    
     def rock_paper_scissors():
         computer_player_choice = random.randrange(0, 3)
 
