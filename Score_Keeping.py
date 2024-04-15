@@ -17,8 +17,10 @@ class Score_Keeper():
   def keep_count(character):
     if (character == 'W'):
       player_score += 1
-    else:
+    elif(character -- 'C':
       computer_score += 1
+    else:
+      print('Neither player wins, scores not updated')
 
   # countdown scores
   def countdown_score(character)
