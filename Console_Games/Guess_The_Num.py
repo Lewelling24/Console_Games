@@ -1,4 +1,5 @@
 import random
+import time
 
 class Guess_The_Num:
     
@@ -8,7 +9,7 @@ class Guess_The_Num:
     #Guess_The_Number_Player will be for the player to guess against the computer
     def Guess_The_Number_Player():
 
-        computer_choice = random.randrange(0,101)
+        computer_choice = random.randrange(0,11)
 
         guess_count = 0
         input_validation_flag = False
@@ -16,11 +17,11 @@ class Guess_The_Num:
         while(guess_count < 3):
 
             while(not input_validation_flag):
-                player_choice = int(input("Please choose a number between 0 and 100 "))
-                if (player_choice >=0 and player_choice <= 100):
+                player_choice = int(input("Please choose a number between 0 and 50: "))
+                if (player_choice >=0 and player_choice <= 10):
                     input_validation_flag = True
                 else:
-                    print("That is not a valid number")
+                    print("That is not a valid number for this game.")
 
             if(player_choice == computer_choice):
                 print("You guessed the correct number, you win!")
@@ -42,15 +43,16 @@ class Guess_The_Num:
         input_validation_flag = False
        
         while(not input_validation_flag):
-                player_choice = int(input("Please choose a number between 0 and 100 "))
-                if (player_choice >=0 and player_choice <= 100):
+                player_choice = int(input("Please choose a number between 0 and 50: "))
+                if (player_choice >=0 and player_choice <= 10):
                     input_validation_flag = True
                 else:
-                    print("That is not a valid number")
+                    print("That is not a valid number for this game.")
 
     
         while (guess_count < 3):
-            computer_choice = random.randrange(0,101)
+            computer_choice = random.randrange(0,11)
+            time.sleep(2) # time delay for some realism
 
             if(computer_choice == player_choice):
                 print("The computer was able to guess your number, you lose!")
