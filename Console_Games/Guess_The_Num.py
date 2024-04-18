@@ -17,7 +17,7 @@ class Guess_The_Num:
         while(guess_count < 3):
 
             while(not input_validation_flag):
-                player_choice = int(input("Please choose a number between 0 and 50: "))
+                player_choice = int(input("Please choose a number between 0 and 10: "))
                 if (player_choice >=0 and player_choice <= 10):
                     input_validation_flag = True
                 else:
@@ -43,7 +43,7 @@ class Guess_The_Num:
         input_validation_flag = False
        
         while(not input_validation_flag):
-                player_choice = int(input("Please choose a number between 0 and 50: "))
+                player_choice = int(input("Please choose a number between 0 and 10: "))
                 if (player_choice >=0 and player_choice <= 10):
                     input_validation_flag = True
                 else:
